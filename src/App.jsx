@@ -1,5 +1,6 @@
 
 import './App.css'
+import Footer from './Componenet/Footer'
 import Hero from './Componenet/Hero'
 import Navber from './Componenet/Navber'
 import Pricing from './Componenet/Pricing'
@@ -19,6 +20,7 @@ function App() {
       <ToolsSec></ToolsSec>
       <Pricing></Pricing>
       <Workflow></Workflow>
+      <Footer></Footer>
     </>
   )
 }
