@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { IoMdCheckmark } from 'react-icons/io'
+import { toast } from 'react-toastify'
 
 const ModalsCard = ({item, addCard, setAddCard}) => {
     const [cardBuy, setCardBuy] = useState(false)
@@ -8,9 +9,11 @@ const ModalsCard = ({item, addCard, setAddCard}) => {
         setCardBuy(true)
         const isFound = addCard.find(i => i.id === item.id)
         if(isFound){
+          toast.error("This card allrady added")
           return;
         }
         setAddCard([...addCard, item])
+        toast.success("Success fully added to card")
     }
 
   return (

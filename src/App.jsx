@@ -1,4 +1,5 @@
 
+import { useState } from 'react'
 import './App.css'
 import Footer from './Componenet/Footer'
 import Hero from './Componenet/Hero'
@@ -11,14 +12,18 @@ import Home from './mainFunctionComponent/Home'
 
 
 function App() {
+  const [data, setData] = useState([])
 
+const receiveData = (value) => {
+  setData(value)
+}
 
   return (
     <>
-      <Navber></Navber>
+      <Navber data = {data}></Navber>
       <Hero></Hero>
       <RattingSec></RattingSec>
-      <Home></Home>
+      <Home sendData = {receiveData}></Home>
       
       <ToolsSec></ToolsSec>
       <Pricing></Pricing>

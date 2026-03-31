@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify'
 import cards from '../../assets/cards.png'
 const Cards = ({addCard, setAddCard}) => {
 
@@ -5,11 +6,13 @@ const Cards = ({addCard, setAddCard}) => {
 
   const checkout = () => {
     setAddCard([])
+    toast.success("All card Checkout!")
   }
 
   const handleDelet = (item) => {
     const delet = addCard.filter(c => c.id !== item.id)
     setAddCard(delet)
+    toast.success("Deleted this item!")
   }
   
   return (

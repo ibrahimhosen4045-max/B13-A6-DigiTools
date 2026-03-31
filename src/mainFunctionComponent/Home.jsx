@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Modals from './conponent/Modals'
 import Cards from './conponent/Cards';
 
@@ -9,15 +9,18 @@ const promise = async () => {
 
 const getPromise = promise();
 
-const Home = () => {
+const Home = ({sendData}) => {
   const [tabs, setTab] = useState("Products")
 
   const [addCard, setAddCard] = useState([])
 
   const toggolinge = (tab) => {
     setTab(tab)
-
   }
+
+  useEffect(()=>{
+    sendData(addCard)
+  }, [addCard])
 
   return (
     <div>
@@ -31,7 +34,7 @@ const Home = () => {
         
     </div>  
 
-      {tabs === "Products" && <Modals Modals = {getPromise} addCard = {addCard} setAddCard = {setAddCard}></Modals>}
+      {tabs === "Products" && <Modals Modals = {getPromise} addCard = {addCard} setAddCard = {setAddCard} ></Modals>}
       {tabs === "Cart" && <Cards addCard = {addCard} setAddCard = {setAddCard}></Cards>}
     </div>
   )

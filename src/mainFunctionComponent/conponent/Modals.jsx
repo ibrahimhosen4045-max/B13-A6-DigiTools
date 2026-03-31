@@ -6,9 +6,9 @@ const Modals = ({Modals, addCard, setAddCard}) => {
   
   return (
     <div>
-      <div className=' container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7.5'>
+      <div className=' container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7.5 px-2 lg:px-0'>
         {data.map(item => 
-          <ModalsCard key={item.id} item = {item} addCard = {addCard} setAddCard = {setAddCard}></ModalsCard>
+          <ModalsCard key={item.id} item = {item} addCard = {addCard} setAddCard = {setAddCard} ></ModalsCard>
         )}
       </div>
     </div>
