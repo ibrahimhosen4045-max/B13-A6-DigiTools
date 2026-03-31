@@ -7,6 +7,7 @@ import Pricing from './Componenet/Pricing'
 import RattingSec from './Componenet/RattingSec'
 import ToolsSec from './Componenet/ToolsSec'
 import Workflow from './Componenet/Workflow'
+import Home from './mainFunctionComponent/Home'
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
       <Navber></Navber>
       <Hero></Hero>
       <RattingSec></RattingSec>
+      <Home></Home>
+      
       <ToolsSec></ToolsSec>
       <Pricing></Pricing>
       <Workflow></Workflow>
