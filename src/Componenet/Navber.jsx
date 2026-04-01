@@ -5,11 +5,11 @@ const Navber = ({data}) => {
   const total = data.reduce((sum, item) => sum + item.price , 0)
     const meno = (
         <>
-            <li>Products</li>
-            <li>Features</li>
-            <li>Pricing</li>
-            <li>Testimonials</li>
-            <li>FAQ</li>
+            <li className='hover:text-purple-800'>Products</li>
+            <li className='hover:text-purple-800'>Features</li>
+            <li className='hover:text-purple-800'>Pricing</li>
+            <li className='hover:text-purple-800'>Testimonials</li>
+            <li className='hover:text-purple-800'>FAQ</li>
         </>
     )
 
@@ -30,7 +30,7 @@ const Navber = ({data}) => {
     <h1 className='text-3xl font-extrabold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent'>DigiTools</h1>
   </div>
   <div className=' navbar-center '>
-    <ul className=' gap-4 font-semibold hidden lg:flex'>
+    <ul className=' gap-4 font-semibold hidden lg:flex cursor-pointer '>
         {meno}
     </ul>
   </div>
