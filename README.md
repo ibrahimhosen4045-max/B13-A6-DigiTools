@@ -1,16 +1,36 @@
-# React + Vite
+# 🎯 A-6 Digital Tools Buying Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Project Description
+**A-6 Digital Tools Buying Website** is a modern, responsive React.js application where users can browse, add, and purchase premium digital tools. It features a dynamic cart, product filtering, and interactive UI to enhance user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Technologies Used
+- **React.js**  
+- **Tailwind CSS & DaisyUI**  
+- **JavaScript (ES6+)**  
+- **React-Toastify** (for notifications)  
+- **JSON** (for product data)  
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Key Features
+1. **Dynamic Product Cart** – Add products to the cart, remove individual items, and proceed to checkout with real-time updates.  
+2. **Responsive Design** – Fully responsive layout for mobile, tablet, and desktop screens.  
+3. **Interactive UI & Alerts** – Use of React-Toastify to display success/error notifications when adding/removing products.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Live Demo
+You can deploy your site on **Netlify** or **Vercel** and share the live link here.  
+
+---
+
+## 📂 Repository
+Clone this repository and run locally:
+
+```bash
+git clone https://github.com/ibrahimhosen4045-max/B13-A6-DigiTools.git
+cd a6-digital-tools
+npm install
+npm start

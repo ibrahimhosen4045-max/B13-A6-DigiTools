@@ -72,7 +72,7 @@ const Footer = () => {
   
     </footer>
     <hr className='text-gray-400'/>
-    <div className='flex text-white/80 justify-between py-7.5'>
+    <div className='flex flex-col md:flex-row text-white/80 justify-between py-7.5'>
         <p className=''>© 2026 Digitools. All rights reserved.</p>
         <ul className='flex gap-10 '>
             <li>Privacy Policy</li>

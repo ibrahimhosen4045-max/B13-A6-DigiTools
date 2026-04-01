@@ -1,6 +1,7 @@
 
 import { IoMdCheckmark } from 'react-icons/io'
 import { toast } from 'react-toastify'
+import fileImage from '../../assets/products/file.png'
 
 const ProductsCard = ({item, addCard, setAddCard}) => {
 
@@ -18,8 +19,8 @@ const ProductsCard = ({item, addCard, setAddCard}) => {
     const isAdded = addCard.find(i => i.id === item.id)
 
   return (
-     <div className=' rounded-lg shadow-sm border border-gray-100 p-6 flex flex-col items-start gap-4 relative'>
-            <img className='p-3 border rounded-full w-16 h-16 object-contain border-gray-200 shadow-sm' src={item.icon} alt={item.name} />
+     <div className=' rounded-lg shadow-sm border border-gray-100 p-6 flex flex-col items-start gap-4 relative transition hover:-translate-y-1 hover:shadow-lg duration-150'>
+            <img className='p-3 border rounded-full w-16 h-16 object-contain border-gray-200 shadow-sm' src={item.icon} alt={item.name} onError={(e) => e.target.src = fileImage}/>
             <div className=' absolute top-2 right-2'>
               {item.tag === "Popular" && <button className='py-1.5 px-3 font-semibold rounded-full text-purple-700 bg-purple-100'>{item.tag}</button>}
               {item.tag === "New" && <button className='py-1.5 px-3 font-semibold rounded-full text-green-700 bg-green-100'>{item.tag}</button>}
