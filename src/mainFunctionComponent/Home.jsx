@@ -23,8 +23,8 @@ const Home = ({sendData}) => {
   }, [addCard])
 
   return (
-    <div>
-      <h1 className='text-5xl font-extrabold text-center'>Premium Digital Tools</h1>
+    <div className='w-11/12 mx-auto'>
+      <h1 className='text-4xl lg:text-5xl font-extrabold text-center'>Premium Digital Tools</h1>
       <p className='text-[#627382] text-center py-5'>Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
 
       {/* name of each tab group should be unique */}

@@ -19,7 +19,7 @@ const receiveData = (value) => {
 }
 
   return (
-    <>
+    <div className=''>
       <Navber data = {data}></Navber>
       <Hero></Hero>
       <RattingSec></RattingSec>
@@ -29,7 +29,7 @@ const receiveData = (value) => {
       <Pricing></Pricing>
       <Workflow></Workflow>
       <Footer></Footer>
-    </>
+    </div>
   )
 }
 

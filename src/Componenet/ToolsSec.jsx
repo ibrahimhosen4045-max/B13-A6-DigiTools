@@ -10,7 +10,7 @@ const ToolsSec = () => {
         <h1 className='text-3xl md:text-5xl font-extrabold'>Get Started in 3 Steps</h1>
         <p className='text-[#627382]'>Start using premium digital tools in minutes, not hours.</p>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7.5 container mx-auto px-2 md:px-0'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7.5 w-11/12 mx-auto px-2 md:px-0'>
         <div className='bg-white rounded-xl shadow-md py-22 px-6 relative text-center'>
             <div className=' absolute top-3 right-3'>
                 <button className='px-2.5 py-1.75 text-sm rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white'>01</button>

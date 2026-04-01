@@ -2,9 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='bg-[#101727]'>
-        <div className='container mx-auto'>
-            <footer className="footer sm:footer-horizontal text-white/80 py-20">
+    <div className='bg-[#101727] '>
+        <div className='w-11/12 mx-auto'>
+            <footer className="footer sm:footer-horizontal text-white/80 py-20 ">
   <aside>
     <h1 className='text-3xl font-extrabold text-white'>DigiTool</h1>
     <p>
@@ -79,7 +79,7 @@ const Footer = () => {
             <li>Terms of Service</li>
             <li>Cookies</li>
         </ul>
-    </div>
+        </div>
         </div>
     </div>
   )
