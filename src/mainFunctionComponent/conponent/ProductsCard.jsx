@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
+
 import { IoMdCheckmark } from 'react-icons/io'
 import { toast } from 'react-toastify'
 
-const ModalsCard = ({item, addCard, setAddCard}) => {
-    const [cardBuy, setCardBuy] = useState(false)
+const ProductsCard = ({item, addCard, setAddCard}) => {
 
     const clickHandle = () => {
-        setCardBuy(true)
+        
         const isFound = addCard.find(i => i.id === item.id)
         if(isFound){
           toast.error("This card allrady added")
@@ -16,9 +15,11 @@ const ModalsCard = ({item, addCard, setAddCard}) => {
         toast.success("Success fully added to card")
     }
 
+    const isAdded = addCard.find(i => i.id === item.id)
+
   return (
      <div className=' rounded-lg shadow-sm border border-gray-100 p-6 flex flex-col items-start gap-4 relative'>
-            <img className='p-3 border rounded-full border-gray-200 shadow-sm' src={item.icon} alt="" />
+            <img className='p-3 border rounded-full w-16 h-16 object-contain border-gray-200 shadow-sm' src={item.icon} alt={item.name} />
             <div className=' absolute top-2 right-2'>
               {item.tag === "Popular" && <button className='py-1.5 px-3 font-semibold rounded-full text-purple-700 bg-purple-100'>{item.tag}</button>}
               {item.tag === "New" && <button className='py-1.5 px-3 font-semibold rounded-full text-green-700 bg-green-100'>{item.tag}</button>}
@@ -31,13 +32,18 @@ const ModalsCard = ({item, addCard, setAddCard}) => {
               <span className='text-lg text-[#627382]'>/{item.period}</span>
             </div>
             <div>
-              <h2 className='flex  items-center gap-2 text-[#627382]'><IoMdCheckmark className='text-green-500'/> {item.features["0"]}</h2>
-              <h2 className='flex  items-center gap-2 text-[#627382]'><IoMdCheckmark className='text-green-500'/> {item.features["1"]}</h2>
-              <h2 className='flex  items-center gap-2 text-[#627382]'><IoMdCheckmark className='text-green-500'/> {item.features["2"]}</h2>
+              {item.features.map((item, index) => (
+                <h1 key={index} className='flex  items-center gap-2 text-[#627382]'><IoMdCheckmark className='text-green-500'/>{item}</h1>
+              ))}
             </div>
-            {cardBuy ? <button onClick={clickHandle} className='btn w-full rounded-full text-white bg-green-500 flex items-center'><IoMdCheckmark/> Added to card!</button> : <button onClick={clickHandle} className='btn w-full rounded-full text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA]'>Buy Now</button>}
-          </div>
-  )
-}
+            <button 
+            onClick={clickHandle}
+            className={`btn w-full rounded-full text-white flex items-center ${
+              isAdded ? "bg-green-500" : "bg-linear-to-r from-[#4F39F6] to-[#9514FA]"
+              }`}
+            >
+              {isAdded ? <><IoMdCheckmark className="mr-1"/> Added to cart!</> : "Buy Now"}
+            </button>
+          </div>)}
 
-export default ModalsCard
+export default ProductsCard

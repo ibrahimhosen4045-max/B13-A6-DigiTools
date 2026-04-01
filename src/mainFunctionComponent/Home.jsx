@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Modals from './conponent/Modals'
+import Modals from './conponent/Products'
 import Cards from './conponent/Cards';
 
 const promise = async () => {
